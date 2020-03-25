@@ -21,13 +21,6 @@ def recur_map(f, data):
     return [not type(x) is list and f(x) or recur_map(f, x) for x in data]
 
 
-# convert_type = 'bd2gcj'
-
-# src_path = r'C:\Users\haru\Desktop\万华园区管廊地图（2020-3-1）\宁波底图\宁波底图\DEV_NBFCS_Process_Polygon.shp'
-
-# dst_path = r'C:\Users\haru\Desktop\万华园区管廊地图（2020-3-1）\宁波底图\宁波底图\DEV_NBFCS_Process_Polygon_Out.shp'
-
-
 def convertor(src_path, dst_path, convert_type):
 
     with fiona.open(src_path, 'r', encoding='utf-8') as source:
